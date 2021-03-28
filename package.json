@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next export",
+    "clear": "rm -r .firebase out && rm .firebaserc firebase.json",
+    "deploy": "clear && firebase login && firebase init && npm run build && npm run export && firebase deploy && npm run clear"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.3",
